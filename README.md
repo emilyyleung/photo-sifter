@@ -1,2 +1,7 @@
 # photo-sifter
-Sort good and bad photos using arrow keys
+
+Sift through good and bad photos using arrow keys
+
+## Requirements
+
+- [Pillow](https://pypi.org/project/pillow/)
