@@ -41,7 +41,8 @@ class PhotoSifter:
     
     def reload_images(self):
         self.images = [f for f in listdir(self.path) if isfile(join(self.path, f))]
-        print(self.images)
+        print(self.images, self.count)
+        self.count -= 1
         if len(self.images) == 0:
             self.label.config(image='')
             # self.label.image = None
