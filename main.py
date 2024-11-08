@@ -22,7 +22,8 @@ class PhotoSifter:
             self.count = 0
 
             self.image_load = Image.open(self.path + self.images[self.count])
-            self.image_resized = self.image_load.resize((300, 300))
+
+            self.image_resized = self.resize_image()
             self.image = ImageTk.PhotoImage(self.image_resized)
 
             self.label = tk.Label(image=self.image)
@@ -50,10 +51,23 @@ class PhotoSifter:
             self.load_image(self.images[0])
         else:
             self.load_image(self.images[self.count])
+    
+    def resize_image(self):
+        raw_image_width = self.image_load.width
+        raw_image_height = self.image_load.height
+
+        if raw_image_width > raw_image_height:
+            image_width = 1000
+            image_height = int(( raw_image_height/raw_image_width ) * 1000)
+            return self.image_load.resize((image_width, image_height))
+        else:
+            image_height = 1000
+            image_width = int(( raw_image_width/raw_image_height ) * 1000)
+            return self.image_load.resize((image_width, image_height))
 
     def load_image(self, image_path):
         self.image_load = Image.open(self.path + image_path)
-        self.image_resized = self.image_load.resize((300, 300))
+        self.image_resized = self.resize_image()
         self.image = ImageTk.PhotoImage(self.image_resized)
         self.label.config(image=self.image)
         self.label.pack()
