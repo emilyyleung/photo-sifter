@@ -5,9 +5,9 @@ Sift through good and bad photos using arrow keys
 ## About The Project
 
 As someone who enjoys capturing memories on a digital camera, I end up with hundreds to thousands of photos to process at one given time.
-Procrastination gets the best of me when thinking about the task at hand, but I also want to get them in the hands of family and friends as soon as possible.
+Procrastination gets the best of me when thinking about the task I've given myself, but I also want to get them in the hands of family and friends as soon as possible.
 
-Instead of spending my spare time sifting through my most recent collection of photos, I used it to build this tool. My hope is that it will pay off in the future 😅
+Instead of spending my spare time sifting through my most recent collection of photos, I used it to build this tool. Let's hope it pays off in the future 😅
 
 ### Built With
 
