@@ -1,6 +1,6 @@
 # photo-sifter
 
-Sift through good and bad photos using arrow keys
+Sift through photos using arrow keys
 
 ## About The Project
 
