@@ -33,6 +33,11 @@ python main.py
 - RIGHT to move photo into 'upload' folder
 - LEFT to move photo into 'skip' folder
 
+## Roadmap
+
+- [ ] Limit files to accept images only
+- [ ] Add text to let user know that you are at the start or end of the list (rather than console logs)
+
 ## Sources
 
 - https://www.w3resource.com/python-exercises/tkinter/python-tkinter-events-and-event-handling-exercise-12.php
