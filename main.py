@@ -43,10 +43,11 @@ class PhotoSifter:
     def reload_images(self):
         self.images = [f for f in listdir(self.path) if isfile(join(self.path, f))]
         print(self.images, self.count)
-        self.count -= 1
+        if self.count != 0:
+            self.count -= 1
+
         if len(self.images) == 0:
             self.label.config(image='')
-            # self.label.image = None
         elif len(self.images) == 1:
             self.load_image(self.images[0])
         else:
@@ -73,20 +74,24 @@ class PhotoSifter:
         self.label.pack()
 
     def press_right(self, action):
-        print("RIGHT")
-        current_image = self.images[self.count]
-        current_file = self.path + current_image
-        move_file = self.path + 'upload/' + current_image
-        rename(current_file, move_file)
-        self.reload_images()
+        if len(self.images) == 0:
+            print("RIGHT")
+        else:
+            current_image = self.images[self.count]
+            current_file = self.path + current_image
+            move_file = self.path + 'upload/' + current_image
+            rename(current_file, move_file)
+            self.reload_images()
 
     def press_left(self, action):
-        print("LEFT")
-        current_image = self.images[self.count]
-        current_file = self.path + current_image
-        move_file = self.path + 'skip/' + current_image
-        rename(current_file, move_file)
-        self.reload_images()
+        if len(self.images) == 0:
+            print("LEFT")
+        else:
+            current_image = self.images[self.count]
+            current_file = self.path + current_image
+            move_file = self.path + 'skip/' + current_image
+            rename(current_file, move_file)
+            self.reload_images()
 
     def press_up(self, action):
         if (self.count == 0):
