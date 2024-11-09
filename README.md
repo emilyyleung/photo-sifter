@@ -4,10 +4,10 @@ Sift through good and bad photos using arrow keys
 
 ## About The Project
 
-As someone who enjoys capturing memories on my digital camera, I end up with hundreds to thousands of photos that need sorting at a time.
-With that many to sort through, I find the process of selecting the best ones to share with family and friends to be a tedious one.
+As someone who enjoys capturing memories on a digital camera, I end up with hundreds to thousands of photos to process at one given time.
+Procrastination gets the best of me when thinking about the task at hand, but I also want to get them in the hands of family and friends as soon as possible.
 
-As a result, instead of spending my spare time going through and organise my most recent collection of photos, I used it to build this tool - hoping that it will pay off in the future 😅
+So instead of spending my spare time sifting through my most recent collection of photos, I used it to build this tool - hoping that it will pay off in the future 😅
 
 ### Built With
 
