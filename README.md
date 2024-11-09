@@ -2,6 +2,13 @@
 
 Sift through good and bad photos using arrow keys
 
+## About The Project
+
+As someone who enjoys capturing memories on my digital camera, I end up with hundreds to thousands of photos that need sorting at a time.
+With that many to sort through, I find the process of selecting the best ones to share with family and friends to be a tedious one.
+
+As a result, instead of spending my spare time going through and organise my most recent collection of photos, I used it to build this tool - hoping that it will pay off in the future 😅
+
 ### Built With
 
 - [Python](https://www.python.org/)
