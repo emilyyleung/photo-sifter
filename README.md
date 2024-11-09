@@ -2,9 +2,29 @@
 
 Sift through good and bad photos using arrow keys
 
-## Requirements
+### Built With
 
-- [Pillow](https://pypi.org/project/pillow/)
+- [Python](https://www.python.org/)
+- [Pillow](https://python-pillow.org/)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+
+## Getting Started
+
+1. Install Python (currently using: Python 3.12.7)
+2. Clone the repo
+3. Install the dependencies
+4. Copy images into 'photos' folder
+5. Run the program
+
+```bash
+python main.py
+```
+
+6. Use the arrow keys to run an action:
+
+- UP / DOWN navigates between images
+- RIGHT to move photo into 'upload' folder
+- LEFT to move photo into 'skip' folder
 
 ## Sources
 

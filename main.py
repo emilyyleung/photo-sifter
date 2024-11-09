@@ -1,6 +1,6 @@
 import tkinter as tk
 from os import listdir, rename, scandir
-from os.path import isfile, join
+from os.path import isfile, join, isdir, splitext
 
 from PIL import Image, ImageTk
 
@@ -10,12 +10,31 @@ class PhotoSifter:
         self.root.title("Photo Sifter")
 
         self.path = './photos/'
+        self.skip_folder = self.path + 'skip/'
+        self.upload_folder = self.path + 'upload/'
+
+        file_extensions = ['.png', '.jpeg', '.jpg']
+
+        # START CHECKS ################################################################
+
+        if isdir(self.path) == False or isdir(self.skip_folder) == False or isdir(self.upload_folder) == False:
+            print("Please provide the following folders: /photos, /photos/skip, /photos/upload")
+            exit()
+        
         self.total = 0
 
         for path in scandir(self.path):
-            if (path.is_file()):
-                self.total += 1
-        
+            if path.is_file():
+                file_name, file_extension = splitext(path)
+                if file_extension in file_extensions:
+                    self.total += 1
+
+        if self.total == 0:
+            print("No images provided")
+            exit()
+
+        # FINISH CHECKS ################################################################
+
         if self.total > 0:
             self.images = [f for f in listdir(self.path) if isfile(join(self.path, f))]
             
@@ -79,7 +98,7 @@ class PhotoSifter:
         else:
             current_image = self.images[self.count]
             current_file = self.path + current_image
-            move_file = self.path + 'upload/' + current_image
+            move_file = self.upload_folder + current_image
             rename(current_file, move_file)
             self.reload_images()
 
@@ -89,7 +108,7 @@ class PhotoSifter:
         else:
             current_image = self.images[self.count]
             current_file = self.path + current_image
-            move_file = self.path + 'skip/' + current_image
+            move_file = self.skip_folder + current_image
             rename(current_file, move_file)
             self.reload_images()
 
