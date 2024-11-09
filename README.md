@@ -37,6 +37,7 @@ python main.py
 
 - [ ] Limit files to accept images only
 - [ ] Add text to let user know that you are at the start or end of the list (rather than console logs)
+- [ ] Allow user input to set a location rather than a hardcoded path
 
 ## Sources
 
